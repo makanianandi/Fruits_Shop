@@ -41,14 +41,14 @@ class MyHomePage extends StatelessWidget {
     var evenNumbers = numberList.where((int i) => i.isEven);
     numberList.add(4);
     List<Product> productList = [];
-    productList.add(Product("Apple", "\$ 34.00", "Gala Apple","Professor at Conestoga","assets/images/appletrans.png"));
-    productList.add(Product("Orange", "\$ 5.25","Red Orange ", "Professor at Conestoga","assets/images/grapefruittans.png"));
-    productList.add(Product("Kiwi", "\$ 4.10","furry brownish green ", "Founder of Microsoft","assets/images/kiwi.png"));
-    productList.add(Product("Mango", "\$ 20.00", "Kesar Mango","Professor at Conestoga","assets/images/mangotrans.png"));
-    productList.add(Product("Orange", "\$ 5.25","Citrus Species", "Professor at Conestoga","assets/images/orange.png"));
-    productList.add(Product("Pineapple", "\$ 4.10","Edible fruit", "Founder of Microsoft","assets/images/pineapple.png"));
-    productList.add(Product("Pomegranate", "\$ 5.25","Sweet fruits", "Professor at Conestoga","assets/images/pomogr.png"));
-    productList.add(Product("Strawberry", "\$ 2.22","Red Strawberry", "Founder of Microsoft","assets/images/strawberrytrans.png"));
+    productList.add(Product("Apple", "\$ 34.00", "Gala Apple","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/appletrans.png"));
+    productList.add(Product("Orange", "\$ 5.25","Red Orange ", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/grapefruittans.png"));
+    productList.add(Product("Kiwi", "\$ 4.10","furry brownish green ", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/kiwi.png"));
+    productList.add(Product("Mango", "\$ 20.00", "Kesar Mango","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/mangotrans.png"));
+    productList.add(Product("Orange", "\$ 5.25","Citrus Species", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/orange.png"));
+    productList.add(Product("Pineapple", "\$ 4.10","Edible fruit", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/pineapple.png"));
+    productList.add(Product("Pomegranate", "\$ 5.25","Sweet fruits", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/pomogr.png"));
+    productList.add(Product("Strawberry", "\$ 2.22","Red Strawberry", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/strawberrytrans.png"));
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
