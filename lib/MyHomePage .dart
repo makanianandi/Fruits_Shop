@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'Product.dart';
 import 'ProductDetails.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -37,15 +35,20 @@ class MyHomePage extends StatelessWidget {
 
     List<int> numberList = [];
 
-    numberList.add(3);
-    numberList.add(4);
+    numberList.add(6);
+
     int firstNum = numberList[0];
     var evenNumbers = numberList.where((int i) => i.isEven);
     numberList.add(4);
     List<Product> productList = [];
-    productList.add(Product("Apple", 34, "Professor at Conestoga","assets/images/appletrans.png"));
-    productList.add(Product("Pomegranate", 45, "Professor at Conestoga","assets/images/grapefruittans.png"));
-    productList.add(Product("Pineapple", 64, "Founder of Microsoft","assets/images/kiwi.png"));
+    productList.add(Product("Apple", "\$ 34.00", "Gala Apple","Professor at Conestoga","assets/images/appletrans.png"));
+    productList.add(Product("Orange", "\$ 5.25","Red Orange ", "Professor at Conestoga","assets/images/grapefruittans.png"));
+    productList.add(Product("Kiwi", "\$ 4.10","furry brownish green ", "Founder of Microsoft","assets/images/kiwi.png"));
+    productList.add(Product("Mango", "\$ 20.00", "Kesar Mango","Professor at Conestoga","assets/images/mangotrans.png"));
+    productList.add(Product("Orange", "\$ 5.25","Citrus Species", "Professor at Conestoga","assets/images/orange.png"));
+    productList.add(Product("Pineapple", "\$ 4.10","Edible fruit", "Founder of Microsoft","assets/images/pineapple.png"));
+    productList.add(Product("Pomegranate", "\$ 5.25","Sweet fruits", "Professor at Conestoga","assets/images/pomogr.png"));
+    productList.add(Product("Strawberry", "\$ 2.22","Red Strawberry", "Founder of Microsoft","assets/images/strawberrytrans.png"));
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -53,7 +56,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body:
       ListView.builder(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(12),
           itemCount: productList.length,
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
@@ -66,15 +69,35 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: Card(
+                    elevation:5,
                     shape: RoundedRectangleBorder(
                     side: BorderSide(color: Colors.white70, width: 1),
                     borderRadius: BorderRadius.circular(10)),
                     color: Colors.white,
-                    child: Column(children: [
-                      Text(productList[index].name),
-                      Text(productList[index].price.toString()),
-                      Image.asset(productList[index].proimg)
-                    ],)
+                    child: Row(
+                        children: [
+
+                          Column(children: [
+                            Padding(padding: EdgeInsets.all(12.0)),
+                            Image.asset(productList[index].proimg,height: 100,)
+                          ],),
+                          SizedBox(width: 30),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(padding: EdgeInsets.only(
+                                  left: 20,
+                                  top:10,
+                                  right:10,
+                                  bottom: 10)),
+                              Align(alignment: Alignment.topLeft,),
+                              Text(productList[index].name,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.green,),),
+                              Text(productList[index].shortDesc,style: TextStyle(fontSize: 20,color: Colors.black54),),
+                              Text(productList[index].price,style: TextStyle(fontSize: 20,),),
+                            ],
+                          ),
+                        ],
+                    )
                 )
             );
           }

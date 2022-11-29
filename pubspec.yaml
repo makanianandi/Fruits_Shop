@@ -65,6 +65,14 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
       - assets/images/
+      - assets/images/appletrans.png
+      - assets/images/grapefruittans.png
+      - assets/images/kiwi.png
+      - assets/images/mangotrans.png
+      - assets/images/orange.png
+      - assets/images/pineapple.png
+      - assets/images/pomogr.png
+      - assets/images/raspberry.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

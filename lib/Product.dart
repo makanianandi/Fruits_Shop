@@ -4,9 +4,9 @@ class Product {
 
   String name;
   String proimg;
-  String description;
-  int price;
+  String description,shortDesc;
+  String price;
 
-  Product(this.name, this.price, this.description,this.proimg);
+  Product(this.name, this.price, this.shortDesc,this.description,this.proimg);
 
 }
