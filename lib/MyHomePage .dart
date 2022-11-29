@@ -43,9 +43,9 @@ class MyHomePage extends StatelessWidget {
     var evenNumbers = numberList.where((int i) => i.isEven);
     numberList.add(4);
     List<Product> productList = [];
-    productList.add(Product("Apple", 34, "Professor at Conestoga","assets/freshcartlogo.png"));
-    productList.add(Product("Pomegranate", 45, "Professor at Conestoga","assets/freshcartlogo.png"));
-    productList.add(Product("Pineapple", 64, "Founder of Microsoft","assets/freshcartlogo.png"));
+    productList.add(Product("Apple", 34, "Professor at Conestoga","assets/images/appletrans.png"));
+    productList.add(Product("Pomegranate", 45, "Professor at Conestoga","assets/images/grapefruittans.png"));
+    productList.add(Product("Pineapple", 64, "Founder of Microsoft","assets/images/kiwi.png"));
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -66,11 +66,14 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: Card(
+                    shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.white70, width: 1),
+                    borderRadius: BorderRadius.circular(10)),
                     color: Colors.white,
                     child: Column(children: [
                       Text(productList[index].name),
                       Text(productList[index].price.toString()),
-                      CircleAvatar(backgroundImage: NetworkImage("https://miro.medium.com/fit/c/64/64/1*WSdkXxKtD8m54-1xp75cqQ.jpeg"))
+                      Image.asset(productList[index].proimg)
                     ],)
                 )
             );
