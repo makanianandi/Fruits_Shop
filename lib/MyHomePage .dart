@@ -78,9 +78,18 @@ class MyHomePage extends StatelessWidget {
                         children: [
 
                           Column(children: [
-                            Padding(padding: EdgeInsets.all(12.0)),
-                            Image.asset(productList[index].proimg,height: 100,)
-                          ],),
+                            // Padding(padding: EdgeInsets.all(12.0)),
+                            // Image.asset(productList[index].proimg,height: 100,)
+                            Hero(
+                            tag: productList[index].proimg,
+                              child:
+                              Image(
+                                  width: 120,
+                                  height: 120,
+                                  image: AssetImage(productList[index].proimg)
+                              ),
+                            )
+                                  ],),
                           SizedBox(width: 30),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
