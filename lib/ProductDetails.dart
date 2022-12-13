@@ -16,7 +16,8 @@ class ProductDetails extends StatelessWidget {
           title: Text("Product Details"),
           centerTitle: true,
         ),
-        body: Padding(
+        body: SingleChildScrollView(
+          child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             children:[
@@ -58,6 +59,7 @@ class ProductDetails extends StatelessWidget {
               ],)
             ],
           )
+        )
         )
     );
   }

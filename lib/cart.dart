@@ -8,14 +8,14 @@ class Cart extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Shopping Cart"),
+        title: Text("Checkout Form"),
         centerTitle: true,
       ),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             children:[
-              Text("Cart Page")
+              Text("Checkout Page")
             ]
           )
         )
