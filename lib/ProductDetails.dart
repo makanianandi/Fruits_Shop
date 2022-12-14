@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:fruits_shop/cart.dart';
-import 'package:quantity_input/quantity_input.dart';
+import 'package:fruits_shop/checkout.dart';
 import 'Product.dart';
 
 class ProductDetails extends StatelessWidget {
@@ -40,7 +39,7 @@ class ProductDetails extends StatelessWidget {
                 SizedBox(height: 30),
               ],),
               Column(children: [
-                Text(product.description,style: TextStyle(fontSize: 20,height: 1.7),),
+                Text(product.description,textAlign: TextAlign.justify ,style: TextStyle(fontSize: 20,height: 1.7),),
               ],),
               Column(children: [
                 SizedBox(height: 40),
@@ -49,7 +48,7 @@ class ProductDetails extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // Respond to button press
-                    Navigator.push(context,  MaterialPageRoute(builder: (context) => Cart()),);
+                    Navigator.push(context,  MaterialPageRoute(builder: (context) => Checkout()),);
                   },
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(50, 15, 50, 15)

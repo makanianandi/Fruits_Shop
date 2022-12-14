@@ -41,14 +41,14 @@ class MyHomePage extends StatelessWidget {
     var evenNumbers = numberList.where((int i) => i.isEven);
     numberList.add(4);
     List<Product> productList = [];
-    productList.add(Product("Apple", "\$ 34.00", "Gala Apple","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/appletrans.png"));
-    productList.add(Product("Orange", "\$ 5.25","Red Orange ", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/grapefruittans.png"));
-    productList.add(Product("Kiwi", "\$ 4.10","Furry Brownish ", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/kiwi.png"));
-    productList.add(Product("Mango", "\$ 20.00", "Kesar Mango","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/mangotrans.png"));
-    productList.add(Product("Orange", "\$ 5.25","Citrus Species", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/orange.png"));
-    productList.add(Product("Pineapple", "\$ 4.10","Edible fruit", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/pineapple.png"));
-    productList.add(Product("Pomegranate", "\$ 5.25","Sweet fruits", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/pomogr.png"));
-    productList.add(Product("Strawberry", "\$ 2.22","Red Strawberry", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s","assets/images/strawberrytrans.png"));
+    productList.add(Product("Apple", "\$ 34.00", "Gala Apple","Royal Gala apple is dense, sweet, aromatic and juicy. Its flesh is white and creamy with a sweet taste but not too stressed because it also has a touch of acidity. It is one of the most common apple varieties in our market.","assets/images/appletrans.png"));
+    productList.add(Product("Orange", "\$ 5.25","Red Orange ", "An orange is a fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus × sinensis, which is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange.","assets/images/grapefruittans.png"));
+    productList.add(Product("Kiwi", "\$ 4.10","Furry Brownish ", "Kiwi also called kiwifruit or Chinese gooseberry, woody vine and edible fruit of the family Actinidiaceae. The plant is native to mainland China and Taiwan and is also grown commercially in New Zealand and California. The fruit has a slightly acid taste and can be eaten raw or cooked.","assets/images/kiwi.png"));
+    productList.add(Product("Mango", "\$ 20.00", "Kesar Mango","Also known as the Queen of Mangoes, Gir Kesar Mango is characterised by its sweet taste and bright-orange colour. Gir Kesar Mango arrives late in the mango season when other mango stock is about to dry up. This popular mango variety usually comes in medium sizes and oblong shape.","assets/images/mangotrans.png"));
+    productList.add(Product("Grapefruit", "\$ 5.25","Citrus Species", "The grapefruit is a subtropical citrus tree known for its relatively large, sour to semi-sweet, somewhat bitter fruit. The interior flesh is segmented and varies in color from pale yellow to dark pink. Grapefruit is a citrus hybrid originating in Barbados.","assets/images/orange.png"));
+    productList.add(Product("Pineapple", "\$ 4.10","Edible fruit", "The pineapple is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae. The pineapple is indigenous to South America, where it has been cultivated for many centuries","assets/images/pineapple.png"));
+    productList.add(Product("Pomegranate", "\$ 5.25","Sweet fruits", "Pomegranates are round, red fruits. They feature a white inner flesh that's densely packed with crunchy, juicy edible seeds called arils. They may be best known for the vibrantly colored juice they're often used in, but these unique fruits have a lot more to offer.","assets/images/pomogr.png"));
+    productList.add(Product("Strawberry", "\$ 2.22","Red Strawberry", "The fruit is widely appreciated for its characteristic aroma, bright red color, juicy texture, and sweetness. It is consumed in large quantities, either fresh or in such prepared foods as jam, juice, pies, ice cream, milkshakes, and chocolates. Artificial strawberry flavorings and aromas are also widely used in products such as candy, soap, lip gloss, perfume, and many others.","assets/images/strawberrytrans.png"));
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -101,7 +101,7 @@ class MyHomePage extends StatelessWidget {
                                   bottom: 10)),
                               Align(alignment: Alignment.topLeft,),
                               Text(productList[index].name,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.green,),),
-                              Text(productList[index].shortDesc,style: TextStyle(fontSize: 20,color: Colors.black54),),
+                              Text(productList[index].shortDesc , style: TextStyle(fontSize: 20,color: Colors.black54,),),
                               Text(productList[index].price,style: TextStyle(fontSize: 20,),),
                             ],
                           ),
