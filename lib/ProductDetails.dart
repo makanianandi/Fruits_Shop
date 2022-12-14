@@ -53,7 +53,7 @@ class ProductDetails extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(50, 15, 50, 15)
                   ),
-                  child: Text('ADD TO CART',style: TextStyle(fontSize: 20)),
+                  child: Text('Buy Now',style: TextStyle(fontSize: 20)),
                 ),
               ],)
             ],
